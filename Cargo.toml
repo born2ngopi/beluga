@@ -10,6 +10,7 @@ path = "beluga-app/src/bin/beluga.rs"
 
 [dependencies]
 beluga-app = { path = "./beluga-app" }
+beluga-core = { path = "./beluga-core" }
 
 [workspace]
 members = ["beluga-app", "beluga-core"]
@@ -24,3 +25,8 @@ iced = { git = "https://github.com/iced-rs/iced.git", branch = "master", feature
 tokio = { version = "1.36.0", features = ["fs"] }
 
 rfd = "0.13"
+
+# database clients
+mysql = "24.0.0" # mysql
+postgres = "0.19.7" # postgres
+prusto = { version = "0.5", features = ["presto"] } # trino
